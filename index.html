@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -183,10 +184,13 @@ overflow: hidden;
  <!--     -->
 
   <div class="row1">
+
   <div class="column1"> <div><img src="arrow.png" style="margin-top: 45%; margin-left: 77%"></div></div>
+
   <div class="column1">
     <section class="droppable-elements">
-<br><br>
+     <br><br>
+
         <div class=" droppable" data-draggable-id="frog" ondrop="drop006(event)"ondragover="allowDrop001(event)" id="place001"><span></span></div>
          <div style='font-size:30px; text-align: center;'>&#8681;</div>
 
@@ -196,17 +200,20 @@ overflow: hidden;
     <div data-draggable-id="frog" ondrop="drop008(event)" ondragover="allowDrop003(event)" id="place003"><span></span>
       <div class=" droppable1" >
     
-    </div>
+    </div></div>
     <div style='font-size:30px; text-align: center;'>&#8681;</div><br>
   
 
     <div class=" droppable12" data-draggable-id="frog" ondrop="drop009(event)" ondragover="allowDrop004(event)" id="place004"><div class="pic"><span></span></div></div><br>
 
-    <div style='font-size:30px; text-align: center;margin-left: 50px'>&#8681; Yes </div></div>
-    <div class=" droppable" data-draggable-id="frog" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place004"><span></span></div>
+    <div style='font-size:30px; text-align: center;margin-left: 50px'>&#8681; Yes </div>
+    <div class=" droppable" data-draggable-id="frog" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place005">
+      <span></span>
+    </div>
 
   </section>
   </div>
+
   <div class="column1"></div>
 </div>
 
@@ -217,9 +224,11 @@ overflow: hidden;
     <button class="button"  style="text-decoration: none; background-color: #b7b4b8"onclick="submit001()"><a href="submit.html">Submit</a></button>
     <p id="message001"></p>
 
-    <script>
-    var b = 0;
-    b++;
+
+
+
+ <script>
+
 function dragStart001(event) {
     event.dataTransfer.setData("choice001", event.target.id);
 }
@@ -263,45 +272,38 @@ function allowDrop005(event) {
 function drop006(event) {
     var data = event.dataTransfer.getData("choice001");
     event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
         place001.innerHTML = document.getElementById(target);
 }
 
 function drop007(event) {
     var data = event.dataTransfer.getData("choice002");
     event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
         place001.innerHTML = document.getElementById(target);
 }
 
 function drop008(event) {
     var data = event.dataTransfer.getData("choice003");
     event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
         place001.innerHTML = document.getElementById(target);
 }
 
 function drop009(event) {
     var data = event.dataTransfer.getData("choice004");
     event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
         place001.innerHTML = document.getElementById(target);
 }
 
 function drop010(event) {
     var data = event.dataTransfer.getData("choice005");
     event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
         place001.innerHTML = document.getElementById(target);
 }
 
 
 
-function submit001() {
-if (b > 5) {
-message001.innerHTML = "Congratulations.";
-}
-}
+
     </script>
 </body>
 </html>
+
+ 
